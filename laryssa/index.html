@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aceita um Date?</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('chorao.png'); 
+            background-size: cover;
+            background-position: center;
+            color: #333;
+        }
+
+        .overlay {
+            background-color: rgba(248, 248, 248, 0.9); 
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 30px;
+            color: rgba(252, 9, 9, 0.9);
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+        }
+
+        .buttons button {
+            padding: 15px 30px;
+            font-size: 18px;
+            margin: 0 10px;
+            cursor: pointer;
+            border: 2px solid #0f0505;
+            background-color: #f85f5f;
+            color: #f5f0f0da;
+            border-radius: 30px;
+            outline: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            position: relative;
+        }
+
+        .buttons button:hover {
+            background-color: #1a0205e0;
+            color: #fff;
+        }
+
+        #nao-btn:hover {
+            animation: flee 1s infinite alternate;
+        }
+
+        @keyframes flee {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-20px);
+            }
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 24px;
+            }
+            .buttons button {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <div class="container">
+            <h1>Aceita um date comigo?</h1>
+            <div class="buttons">
+                <button id="sim-btn">Sim</button>
+                <button id="nao-btn">Não</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('sim-btn').addEventListener('click', function() {
+            window.location.href = 'https://www.youtube.com/watch?v=-Dr0Zirod7A'; 
+        });
+
+        document.getElementById('nao-btn').addEventListener('click', function() {
+            alert('Que pena! 😢');
+        });
+    </script>
+</body>
+</html>
